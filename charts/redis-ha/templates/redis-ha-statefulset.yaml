@@ -286,8 +286,6 @@ spec:
               - sh
               - -c
               - /health/redis_readiness.sh
-        securityContext:
-          readOnlyRootFilesystem: true
         resources:
 {{ toYaml .Values.redis.resources | indent 10 }}
         ports:

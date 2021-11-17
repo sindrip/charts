@@ -367,8 +367,6 @@ spec:
               - sh
               - -c
               - /health/sentinel_liveness.sh
-        securityContext:
-          readOnlyRootFilesystem: true
         resources:
 {{ toYaml .Values.sentinel.resources | indent 10 }}
         ports:
